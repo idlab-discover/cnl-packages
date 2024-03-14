@@ -35,6 +35,9 @@ jobs:
         with:
           python-version: "3.x"
 
+      - name: Install Python dependencies
+        run: pip install PyYAML
+
       - name: Merge site.yaml into index.yaml
         run: python3 add_additional_info.py
 
