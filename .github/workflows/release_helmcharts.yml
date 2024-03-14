@@ -30,19 +30,38 @@ jobs:
         uses: helm/chart-releaser-action@v1.6.0
         env:
           CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+
+      - name: Checkout main branch
+        uses: actions/checkout@v3
+        with:
+          path: "main"
+
+      - name: Checkout gh-pages branch
+        uses: actions/checkout@v3
+        with:
+          ref: "gh-pages"
+          path: "gh-pages"
+
       - name: Setup Python
         uses: actions/setup-python@v2
         with:
           python-version: "3.x"
 
-      - name: Install Python dependencies
+      - name: Install dependencies
         run: pip install PyYAML
 
-      - name: Merge site.yaml into index.yaml
-        run: python3 add_additional_info.py
-
-      - name: Commit and push changes
+      - name: Run script to update index.yaml
         run: |
+          python3 ./main/add_additional_info.py
+        env:
+          CHARTS_DIR: "./main/charts"
+          INDEX_FILE: "./gh-pages/index.yaml"
+
+      - name: Commit and push changes to gh-pages
+        run: |
+          cd gh-pages
+          git config user.name "$GITHUB_ACTOR"
+          git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
           git add index.yaml
           git commit -m "Update index.yaml with custom fields from site.yaml"
-          git push
+          git push origin gh-pages
