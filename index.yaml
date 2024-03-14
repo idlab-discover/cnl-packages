@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  example:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2024-03-14T17:09:44.001148805Z"
+    description: A Helm chart for Kubernetes
+    digest: caba79fd99ea8a97b5b69b196b1e7c656ecbb70e0599ecd190d752b6cfa4898f
+    name: example
+    type: application
+    urls:
+    - https://github.com/idlab-discover/cnl-packages/releases/download/example-0.1.0/example-0.1.0.tgz
+    version: 0.1.0
+generated: "2024-03-14T17:09:44.001155858Z"
