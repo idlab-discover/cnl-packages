@@ -30,3 +30,16 @@ jobs:
         uses: helm/chart-releaser-action@v1.6.0
         env:
           CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+      - name: Setup Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Merge site.yaml into index.yaml
+        run: python3 add_additional_info.py
+
+      - name: Commit and push changes
+        run: |
+          git add index.yaml
+          git commit -m "Update index.yaml with custom fields from site.yaml"
+          git push
