@@ -29,7 +29,7 @@ def merge_site_into_index(charts_dir, index_file_path):
 if __name__ == "__main__":
     # Retrieve the paths from environment variables or script arguments
     charts_dir = os.getenv('CHARTS_DIR', sys.argv[1] if len(sys.argv) > 1 else './charts')
-    index_file_path = os.getenv('INDEX_FILE', sys.argv[2] if len(sys.argv) > 2 else './gh-pages/index.yaml')
+    index_file_path = os.getenv('SITE_FILE', sys.argv[2] if len(sys.argv) > 2 else './gh-pages/site.yaml')
 
     # Execute the merge function
     merge_site_into_index(charts_dir, index_file_path)
