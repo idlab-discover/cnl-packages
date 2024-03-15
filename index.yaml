@@ -3,6 +3,16 @@ entries:
   example:
   - apiVersion: v2
     appVersion: 1.16.0
+    created: "2024-03-15T11:14:05.420882872Z"
+    description: A Helm chart for Kubernetes
+    digest: 32444be2359b73201faa62938d87bfa35a22641816b2224115e8381114a3fa84
+    name: example
+    type: application
+    urls:
+    - https://github.com/idlab-discover/cnl-packages/releases/download/example-0.3.0/example-0.3.0.tgz
+    version: 0.3.0
+  - apiVersion: v2
+    appVersion: 1.16.0
     created: "2024-03-15T11:12:40.691757301Z"
     description: A Helm chart for Kubernetes
     digest: 26033e4aeab2fe2d1faf941e6320efd26aaa60fd00e515b860dac072340f1c29
@@ -11,4 +21,4 @@ entries:
     urls:
     - https://github.com/idlab-discover/cnl-packages/releases/download/example-0.2.0/example-0.2.0.tgz
     version: 0.2.0
-generated: "2024-03-15T11:12:40.691766158Z"
+generated: "2024-03-15T11:14:05.421121076Z"
