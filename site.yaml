@@ -12,4 +12,16 @@ entries:
     urls:
     - https://github.com/idlab-discover/cnl-packages/releases/download/example-0.1.0/example-0.1.0.tgz
     version: 0.1.0
-generated: '2024-03-15T11:21:09.596977625Z'
+  prometheus:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: '2024-03-15T11:25:10.053122439Z'
+    description: Just a prometheus example...
+    digest: 3ed6f0597365df55c5e132691ea1459011d35c6888e498af59955fbccfee1c34
+    image_url: https://logowik.com/content/uploads/images/prometheus-monitoring-system4911.logowik.com.webp
+    name: prometheus
+    type: application
+    urls:
+    - https://github.com/idlab-discover/cnl-packages/releases/download/prometheus-0.1.0/prometheus-0.1.0.tgz
+    version: 0.1.0
+generated: '2024-03-15T11:25:10.053127719Z'
