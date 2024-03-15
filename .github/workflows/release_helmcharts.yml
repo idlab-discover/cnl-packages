@@ -42,6 +42,15 @@ jobs:
           ref: "gh-pages"
           path: "gh-pages"
 
+      - name: Commit and push changes to gh-pages
+        run: |
+          cd gh-pages
+          git config user.name "$GITHUB_ACTOR"
+          git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
+          git add index.yaml
+          git commit -m "Update index.yaml with custom fields from site.yaml"
+          git push origin gh-pages
+
       - name: Setup Python
         uses: actions/setup-python@v2
         with:
@@ -65,6 +74,6 @@ jobs:
           cd gh-pages
           git config user.name "$GITHUB_ACTOR"
           git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
-          git add index.yaml
-          git commit -m "Update index.yaml with custom fields from site.yaml"
+          git add site.yaml
+          git commit -m "Update site.yaml with custom fields"
           git push origin gh-pages
