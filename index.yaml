@@ -1,0 +1,36 @@
+apiVersion: v1
+entries:
+  NodeJS:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2024-03-29T12:13:23.491371164Z"
+    description: Newer version of the nodeJS setup.
+    digest: 8e90456a6aca40255a3de9bb415dd9d6909048fd68b3ed2e0b1be21b28a41a61
+    name: NodeJS
+    type: application
+    urls:
+    - https://github.com/idlab-discover/cnl-packages/releases/download/NodeJS-0.1.0/NodeJS-0.1.0.tgz
+    version: 0.1.0
+  example:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2024-03-29T12:13:23.606757513Z"
+    description: A Helm chart for Kubernetes
+    digest: d7241dbd63c3fc613a7886668ea571c89b4278b80f73195de70ad3890ef9614a
+    name: example
+    type: application
+    urls:
+    - https://github.com/idlab-discover/cnl-packages/releases/download/example-0.1.0/example-0.1.0.tgz
+    version: 0.1.0
+  prometheus:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2024-03-29T12:13:23.720813551Z"
+    description: Just a prometheus example...
+    digest: 2ef42a5c5c72795e3d8b76de83e51802733f1edba4fe7a1006ba39e9d91afac4
+    name: prometheus
+    type: application
+    urls:
+    - https://github.com/idlab-discover/cnl-packages/releases/download/prometheus-0.1.0/prometheus-0.1.0.tgz
+    version: 0.1.0
+generated: "2024-03-29T12:13:23.7208449Z"
