@@ -3,21 +3,10 @@ entries:
   NodeJS:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: '2024-03-15T13:47:28.152862587Z'
+    created: '2024-03-29T12:13:23.491371164Z'
     description: Newer version of the nodeJS setup.
-    digest: 92fa1faaf4d3a4d69e443a57822377daa66de7972639a91f022b3d3e42c6e76e
-    image_url: https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Node.js_logo_2015.svg/2560px-Node.js_logo_2015.svg.png
-    name: NodeJS
-    type: application
-    urls:
-    - https://github.com/idlab-discover/cnl-packages/releases/download/NodeJS-0.2.0/NodeJS-0.2.0.tgz
-    version: 0.2.0
-  - apiVersion: v2
-    appVersion: 1.16.0
-    created: '2024-03-15T13:39:42.370373274Z'
-    description: Default NodeJS setup
-    digest: bc2e1b778281c9271c77a6782e2dbc931f1a36a487b05efe509e55107dd5e1e8
-    image_url: https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Node.js_logo_2015.svg/2560px-Node.js_logo_2015.svg.png
+    digest: 8e90456a6aca40255a3de9bb415dd9d6909048fd68b3ed2e0b1be21b28a41a61
+    image_url: https://raw.githubusercontent.com/detain/svg-logos/07e36b4aa0691f3015886624395e083395e528c5/svg/n/nodejs-2.svg
     name: NodeJS
     type: application
     urls:
@@ -26,11 +15,12 @@ entries:
   example:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: '2024-03-15T11:21:09.596971653Z'
+    created: '2024-03-29T12:13:23.606757513Z'
     description: A Helm chart for Kubernetes
-    digest: 301a58b99de18a00c88d3786da2e5171eafddbae4d8ffc801aed511f45b2a86c
+    digest: d7241dbd63c3fc613a7886668ea571c89b4278b80f73195de70ad3890ef9614a
     image_url: https://www.nginx.com/wp-content/uploads/2021/08/NGINX-Part-of-F5-horiz-black-type-1.svg
     name: example
+    something: else
     type: application
     urls:
     - https://github.com/idlab-discover/cnl-packages/releases/download/example-0.1.0/example-0.1.0.tgz
@@ -38,13 +28,13 @@ entries:
   prometheus:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: '2024-03-15T11:25:10.053122439Z'
+    created: '2024-03-29T12:13:23.720813551Z'
     description: Just a prometheus example...
-    digest: 3ed6f0597365df55c5e132691ea1459011d35c6888e498af59955fbccfee1c34
+    digest: 2ef42a5c5c72795e3d8b76de83e51802733f1edba4fe7a1006ba39e9d91afac4
     image_url: https://logowik.com/content/uploads/images/prometheus-monitoring-system4911.logowik.com.webp
     name: prometheus
     type: application
     urls:
     - https://github.com/idlab-discover/cnl-packages/releases/download/prometheus-0.1.0/prometheus-0.1.0.tgz
     version: 0.1.0
-generated: '2024-03-15T13:47:28.152875541Z'
+generated: '2024-03-29T12:13:23.7208449Z'
