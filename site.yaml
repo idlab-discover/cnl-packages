@@ -1,0 +1,11 @@
+entries:
+  NodeJS:
+    0.1.0:
+      image_url: Another one
+  example:
+    0.1.0:
+      image_url: https://www.nginx.com/wp-content/uploads/2021/08/NGINX-Part-of-F5-horiz-black-type-1.svg
+      something: else
+  prometheus:
+    0.1.0:
+      image_url: https://logowik.com/content/uploads/images/prometheus-monitoring-system4911.logowik.com.webp
