@@ -1,4 +1,1 @@
-0.1.0:
-  image_url: "https://raw.githubusercontent.com/detain/svg-logos/07e36b4aa0691f3015886624395e083395e528c5/svg/n/nodejs-2.svg"
-default:
-  image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Node.js_logo_2015.svg/2560px-Node.js_logo_2015.svg.png"
+image_url: "Another one"

@@ -50,15 +50,13 @@ jobs:
       - name: Install dependencies
         run: pip install PyYAML
 
-      - name: Copy index.yaml to site.yaml
-        run: cp ./gh-pages/index.yaml ./gh-pages/site.yaml
-
       - name: Run script to update site.yaml with custom values
         run: |
           python3 ./main/add_additional_info.py
         env:
           CHARTS_DIR: "./main/charts"
-          SITE_FILE: "./gh-pages/site.yaml" # Notice we're now pointing to site.yaml
+          INDEX_FILE: "/gh-pages/index.yaml"
+          SITE_FILE: "./gh-pages/site.yaml"
 
       - name: Commit and push changes to gh-pages
         run: |
