@@ -55,7 +55,7 @@ jobs:
           python3 ./main/add_additional_info.py
         env:
           CHARTS_DIR: "./main/charts"
-          INDEX_FILE: "/gh-pages/index.yaml"
+          INDEX_FILE: "./gh-pages/index.yaml"
           SITE_FILE: "./gh-pages/site.yaml"
 
       - name: Commit and push changes to gh-pages
