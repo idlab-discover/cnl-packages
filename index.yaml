@@ -3,6 +3,16 @@ entries:
   NodeJS:
   - apiVersion: v2
     appVersion: 1.16.0
+    created: "2024-04-04T17:57:12.902871141Z"
+    description: Version two of the NodeJS Application
+    digest: 356831e0810148ad697868e00302bf816f8f68a93be706e242f35b7596f93b85
+    name: NodeJS
+    type: application
+    urls:
+    - https://github.com/idlab-discover/cnl-packages/releases/download/NodeJS-0.2.0/NodeJS-0.2.0.tgz
+    version: 0.2.0
+  - apiVersion: v2
+    appVersion: 1.16.0
     created: "2024-04-04T17:55:51.665558318Z"
     description: Version two of the NodeJS Application
     digest: 2deaa2b8b42d0928a585f1bac624aa68e0f1617a131109cb1faa20ea7821354b
@@ -33,4 +43,4 @@ entries:
     urls:
     - https://github.com/idlab-discover/cnl-packages/releases/download/prometheus-0.1.0/prometheus-0.1.0.tgz
     version: 0.1.0
-generated: "2024-04-04T17:55:51.986019218Z"
+generated: "2024-04-04T17:57:12.902884817Z"
