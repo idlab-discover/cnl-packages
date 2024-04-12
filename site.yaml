@@ -1,0 +1,16 @@
+entries:
+  Nginx:
+    0.1.0:
+      clusterSettings:
+        controlPlaneMachineCount: 2
+        kubernetesVersion: v1.24.10
+        machineCores: 3
+        workerMachineCount: 2
+        workerMachinesMemory: 8
+      imageUrl: https://miro.medium.com/v2/resize:fit:720/format:webp/0*mjG1YdoT7xPcnznN.jpg
+  NodeJS:
+    0.1.0:
+      imageUrl: https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Node.js_logo_2015.svg/2560px-Node.js_logo_2015.svg.png
+  prometheus:
+    0.1.0:
+      imageUrl: https://logowik.com/content/uploads/images/prometheus-monitoring-system4911.logowik.com.webp
