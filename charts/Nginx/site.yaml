@@ -1,0 +1,7 @@
+imageUrl: "https://miro.medium.com/v2/resize:fit:720/format:webp/0*mjG1YdoT7xPcnznN.jpg"
+clusterSettings:
+  kubernetesVersion: "v1.24.10"
+  controlPlaneMachineCount: 2
+  workerMachineCount: 2
+  workerMachinesMemory: 8
+  machineCores: 3
