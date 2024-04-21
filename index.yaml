@@ -35,6 +35,16 @@ entries:
   prometheus:
   - apiVersion: v2
     appVersion: 1.16.0
+    created: "2024-04-21T09:00:49.895152972Z"
+    description: Just a prometheus example... version 3 however
+    digest: f95a0a414e5f4e89ad110da14c4abbcf928282954ea74b2128292f3cc39ff722
+    name: prometheus
+    type: application
+    urls:
+    - https://github.com/idlab-discover/cnl-packages/releases/download/prometheus-1.0.2/prometheus-1.0.2.tgz
+    version: 1.0.2
+  - apiVersion: v2
+    appVersion: 1.16.0
     created: "2024-04-21T08:51:19.622799574Z"
     description: Just a prometheus example... version 3 however
     digest: 446e920a75d383824f21b39871077d95020407d1ffdd74d69798154a8e3d46b3
@@ -103,4 +113,4 @@ entries:
     urls:
     - https://github.com/idlab-discover/cnl-packages/releases/download/prometheus-0.1.0/prometheus-0.1.0.tgz
     version: 0.1.0
-generated: "2024-04-21T08:51:19.622853925Z"
+generated: "2024-04-21T09:00:49.895198628Z"
