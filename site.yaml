@@ -54,3 +54,11 @@ entries:
         workerMachineCount: 3
         workerMachinesMemory: 10
       imageUrl: https://logowik.com/content/uploads/images/prometheus-monitoring-system4911.logowik.com.webp
+    1.0.0:
+      clusterSettings:
+        controlPlaneMachineCount: 1
+        kubernetesVersion: v1.24.10
+        machineCores: 3
+        workerMachineCount: 3
+        workerMachinesMemory: 10
+      imageUrl: https://logowik.com/content/uploads/images/prometheus-monitoring-system4911.logowik.com.webp
