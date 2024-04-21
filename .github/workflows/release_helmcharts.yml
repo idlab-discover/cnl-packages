@@ -69,7 +69,7 @@ jobs:
 
   deploy:
     # Add a dependency to the build job
-    needs: build
+    needs: release
 
     # Grant GITHUB_TOKEN the permissions required to make a Pages deployment
     permissions:
