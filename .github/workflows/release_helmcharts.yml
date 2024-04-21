@@ -97,3 +97,12 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
+
+  hook:
+    runs-on: ubuntu-latest
+    needs: deploy
+    steps:
+      - uses: actions/checkout@v3
+      - name: Let backend know there are new applications
+        run: |
+          curl -X POST https://rnnmj-109-134-178-3.a.free.pinggy.link/fetch-setups
