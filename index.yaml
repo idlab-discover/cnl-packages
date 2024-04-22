@@ -3,6 +3,16 @@ entries:
   Nginx:
   - apiVersion: v2
     appVersion: 1.16.0
+    created: "2024-04-22T11:42:47.72252219Z"
+    description: Another description for the application
+    digest: 8aaa2ebc88532abee96bccb1a01cd1b0b5ac9795ef427b4d8bdff64451a5d0ac
+    name: Nginx
+    type: application
+    urls:
+    - https://github.com/idlab-discover/cnl-packages/releases/download/Nginx-1.12.3/Nginx-1.12.3.tgz
+    version: 1.12.3
+  - apiVersion: v2
+    appVersion: 1.16.0
     created: "2024-04-21T11:05:23.537373701Z"
     description: Nginx setup
     digest: 3b188a32781d1ffbae64a950d4774ddf0ec744983e644629a62afdc5128b669d
@@ -183,4 +193,4 @@ entries:
     urls:
     - https://github.com/idlab-discover/cnl-packages/releases/download/prometheus-0.1.0/prometheus-0.1.0.tgz
     version: 0.1.0
-generated: "2024-04-21T11:05:23.537417954Z"
+generated: "2024-04-22T11:42:47.722569859Z"
