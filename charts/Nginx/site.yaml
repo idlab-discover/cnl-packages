@@ -1,7 +1,0 @@
-imageUrl: "https://www.svgrepo.com/show/373924/nginx.svg"
-clusterSettings:
-  kubernetesVersion: "v1.27.3"
-  controlPlaneMachineCount: 3
-  workerMachineCount: 1
-  workerMachinesMemory: 12
-  machineCores: 2

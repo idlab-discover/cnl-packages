@@ -1,7 +1,0 @@
-imageUrl: "https://logowik.com/content/uploads/images/prometheus-monitoring-system4911.logowik.com.webp"
-clusterSettings:
-  kubernetesVersion: "v1.24.10"
-  controlPlaneMachineCount: 1
-  workerMachineCount: 3
-  workerMachinesMemory: 10
-  machineCores: 3
