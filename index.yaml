@@ -1,6 +1,21 @@
 apiVersion: v1
 entries:
   helloworld:
+  - apiVersion: v1
+    created: "2024-04-26T15:59:08.76370684Z"
+    description: helloworld chart that runs on kubernetes
+    digest: 6e0d504aaeab3dfd6da46adac5c823fdcac93fb02b90ed6c561875402d06901f
+    home: https://github.com/stakater-charts/helloworld
+    keywords:
+    - helloworld
+    - kubernetes
+    maintainers:
+    - email: stakater@aurorasolutions.io
+      name: Stakater
+    name: helloworld
+    urls:
+    - https://github.com/idlab-discover/cnl-packages/releases/download/helloworld-1.0.0/helloworld-1.0.0.tgz
+    version: 1.0.0
   - apiVersion: v2
     appVersion: 1.16.0
     created: "2024-04-26T13:04:11.739761369Z"
@@ -32,4 +47,4 @@ entries:
     urls:
     - https://github.com/idlab-discover/cnl-packages/releases/download/nginx-0.1.0/nginx-0.1.0.tgz
     version: 0.1.0
-generated: "2024-04-26T13:37:57.248508615Z"
+generated: "2024-04-26T15:59:08.763719664Z"
