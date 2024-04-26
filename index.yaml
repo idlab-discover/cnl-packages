@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  hello:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2024-04-26T19:12:24.92883477Z"
+    description: A Helm chart for Kubernetes
+    digest: 2814e1345e31ae6be57c4e6caf5d93f71c46301cf9e710d88b8a08e884466940
+    name: hello
+    type: application
+    urls:
+    - https://github.com/idlab-discover/cnl-packages/releases/download/hello-0.1.0/hello-0.1.0.tgz
+    version: 0.1.0
+generated: "2024-04-26T19:12:24.928855709Z"
