@@ -1,0 +1,9 @@
+image:
+  repository: reyesoft/hello-world
+  tag: latest
+  pullPolicy: IfNotPresent
+service:
+  name: hello-world
+  type: LoadBalancer
+  externalPort: 80
+  internalPort: 8005
