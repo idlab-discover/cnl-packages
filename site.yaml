@@ -2,6 +2,8 @@ entries:
   hello:
     0.1.0:
       imageUrl: https://i.pinimg.com/originals/c4/a2/05/c4a2050a1cbbd8158e717f29185d9ab1.jpg
+    0.2.0:
+      imageUrl: https://i.pinimg.com/originals/c4/a2/05/c4a2050a1cbbd8158e717f29185d9ab1.jpg
   nginx:
     0.2.0:
       imageUrl: https://www.nginx.com/wp-content/uploads/2021/08/NGINX-Part-of-F5-horiz-black-type-1.svg
