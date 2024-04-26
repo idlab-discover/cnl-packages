@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  nginx:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2024-04-26T19:43:48.192581491Z"
+    description: Default example of an empty nginx
+    digest: da959042831ea5372ae83d8b4f8c388af0f219fdf658f1f3eb5ba9b084f12367
+    name: nginx
+    type: application
+    urls:
+    - https://github.com/idlab-discover/cnl-packages/releases/download/nginx-1.0.0/nginx-1.0.0.tgz
+    version: 1.0.0
+generated: "2024-04-26T19:43:48.192586942Z"
