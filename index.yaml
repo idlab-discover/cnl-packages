@@ -52,6 +52,17 @@ entries:
     urls:
     - https://github.com/idlab-discover/cnl-packages/releases/download/NodeJS-0.1.0/NodeJS-0.1.0.tgz
     version: 0.1.0
+  hello-world:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2024-04-26T12:39:37.752064064Z"
+    description: A Helm chart for Kubernetes
+    digest: 3adad34e3eb63cee6c5b158128e70f8be5bc852bf7e035b927973a77a8fad404
+    name: hello-world
+    type: application
+    urls:
+    - https://github.com/idlab-discover/cnl-packages/releases/download/hello-world-0.1.0/hello-world-0.1.0.tgz
+    version: 0.1.0
   prometheus:
   - apiVersion: v2
     appVersion: 1.16.0
@@ -193,4 +204,4 @@ entries:
     urls:
     - https://github.com/idlab-discover/cnl-packages/releases/download/prometheus-0.1.0/prometheus-0.1.0.tgz
     version: 0.1.0
-generated: "2024-04-22T11:42:47.722569859Z"
+generated: "2024-04-26T12:39:37.752122213Z"
