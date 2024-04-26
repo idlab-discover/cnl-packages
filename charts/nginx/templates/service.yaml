@@ -9,6 +9,4 @@ spec:
     - port: { { .Values.service.port } }
       targetPort: http
       nodePort: { { .Values.service.nodePort } }
-      protocol: TCP
-      name: http
   selector: { { - include "nginx.selectorLabels" . | nindent 4 } }
