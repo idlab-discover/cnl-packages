@@ -78,4 +78,15 @@ entries:
     urls:
     - https://github.com/idlab-discover/cnl-packages/releases/download/nginx-0.2.0/nginx-0.2.0.tgz
     version: 0.2.0
-generated: "2024-04-26T18:39:42.952465525Z"
+  reintest:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2024-04-26T18:46:54.560246686Z"
+    description: A Helm chart for Kubernetes
+    digest: 5c92aa02989b023a1cc1e6781dda5c0fa9aabd9c316ffbd7a443cbed11d6a8f6
+    name: reintest
+    type: application
+    urls:
+    - https://github.com/idlab-discover/cnl-packages/releases/download/reintest-0.1.0/reintest-0.1.0.tgz
+    version: 0.1.0
+generated: "2024-04-26T18:46:54.56026486Z"
