@@ -35,6 +35,9 @@ entries:
   NodeJS:
     0.1.0:
       imageUrl: https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Node.js_logo_2015.svg/2560px-Node.js_logo_2015.svg.png
+  hello-world:
+    0.1.0:
+      imageUrl: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVZ8TtKv7qGjrAhJzJPeeaDsYDpmkmVvHR4ONJiiaQxA&s
   prometheus:
     0.1.0:
       imageUrl: https://logowik.com/content/uploads/images/prometheus-monitoring-system4911.logowik.com.webp
