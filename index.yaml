@@ -11,4 +11,15 @@ entries:
     urls:
     - https://github.com/idlab-discover/cnl-packages/releases/download/helloworld-0.1.0/helloworld-0.1.0.tgz
     version: 0.1.0
-generated: "2024-04-26T13:04:11.739771668Z"
+  nginx:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2024-04-26T13:13:05.029644408Z"
+    description: nginx chart for kubernetes
+    digest: 138eb008d6ffdaef11188b888e505219de4ee64154ccea09ecf5df0c21b08a41
+    name: nginx
+    type: application
+    urls:
+    - https://github.com/idlab-discover/cnl-packages/releases/download/nginx-0.1.0/nginx-0.1.0.tgz
+    version: 0.1.0
+generated: "2024-04-26T13:13:05.029653886Z"
