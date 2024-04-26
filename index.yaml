@@ -11,4 +11,15 @@ entries:
     urls:
     - https://github.com/idlab-discover/cnl-packages/releases/download/hello-0.1.0/hello-0.1.0.tgz
     version: 0.1.0
-generated: "2024-04-26T19:21:32.540407233Z"
+  random:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2024-04-26T19:24:06.32049527Z"
+    description: A Helm chart for Kubernetes
+    digest: 91bbc1d1d50a889eef1e62a24c4c11aaba4da42e446bd056a56aeebb249aeacc
+    name: random
+    type: application
+    urls:
+    - https://github.com/idlab-discover/cnl-packages/releases/download/random-0.1.0/random-0.1.0.tgz
+    version: 0.1.0
+generated: "2024-04-26T19:24:06.320500019Z"
