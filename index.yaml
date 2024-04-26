@@ -2,6 +2,15 @@ apiVersion: v1
 entries:
   hello:
   - apiVersion: v2
+    created: "2024-04-26T19:05:36.054117561Z"
+    description: A Helm chart for Kubernetes to deploy a simple Nginx server displaying
+      "Hello World"
+    digest: 0f048bd7c4888bf95e4fcba3a7cc86a6185df266db3ea0f6e4fd07a045e665f6
+    name: hello
+    urls:
+    - https://github.com/idlab-discover/cnl-packages/releases/download/hello-0.2.0/hello-0.2.0.tgz
+    version: 0.2.0
+  - apiVersion: v2
     created: "2024-04-26T19:01:26.434230199Z"
     description: A Helm chart for Kubernetes to deploy a simple Nginx server displaying
       "Hello World"
@@ -99,4 +108,4 @@ entries:
     urls:
     - https://github.com/idlab-discover/cnl-packages/releases/download/reintest-0.1.0/reintest-0.1.0.tgz
     version: 0.1.0
-generated: "2024-04-26T19:01:26.434259623Z"
+generated: "2024-04-26T19:05:36.054137939Z"
