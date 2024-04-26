@@ -10,3 +10,6 @@ entries:
       imageUrl: https://www.nginx.com/wp-content/uploads/2021/08/NGINX-Part-of-F5-horiz-black-type-1.svg
     0.6.0:
       imageUrl: https://www.nginx.com/wp-content/uploads/2021/08/NGINX-Part-of-F5-horiz-black-type-1.svg
+  reintest:
+    0.1.0:
+      imageUrl: https://www.reinvb.be/images/hermes.jpg
