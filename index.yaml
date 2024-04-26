@@ -30,6 +30,16 @@ entries:
   nginx:
   - apiVersion: v2
     appVersion: 1.16.0
+    created: "2024-04-26T16:23:04.097418424Z"
+    description: nginx chart for kubernetes
+    digest: 379c77ef3639c2ba8a7e5bdf672ebdbfda8e8949f8a32386bf9d56e27aa50c05
+    name: nginx
+    type: application
+    urls:
+    - https://github.com/idlab-discover/cnl-packages/releases/download/nginx-0.3.0/nginx-0.3.0.tgz
+    version: 0.3.0
+  - apiVersion: v2
+    appVersion: 1.16.0
     created: "2024-04-26T16:06:20.936047319Z"
     description: nginx chart for kubernetes
     digest: ea969f0e88e6824d6d6e93f3c67975467a6143f438a96c80a5ebefaf69e11bdb
@@ -38,4 +48,4 @@ entries:
     urls:
     - https://github.com/idlab-discover/cnl-packages/releases/download/nginx-0.2.0/nginx-0.2.0.tgz
     version: 0.2.0
-generated: "2024-04-26T16:06:20.936057398Z"
+generated: "2024-04-26T16:23:04.097431598Z"
