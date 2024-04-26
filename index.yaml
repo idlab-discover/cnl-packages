@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  helloworld:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2024-04-26T13:04:11.739761369Z"
+    description: A Helm chart for Kubernetes
+    digest: 627b3629ad0ef9cbb7e1de87b733cd1ba9f5d24ac24bcb68620de1299efb3d0a
+    name: helloworld
+    type: application
+    urls:
+    - https://github.com/idlab-discover/cnl-packages/releases/download/helloworld-0.1.0/helloworld-0.1.0.tgz
+    version: 0.1.0
+generated: "2024-04-26T13:04:11.739771668Z"
