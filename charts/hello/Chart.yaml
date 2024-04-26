@@ -1,0 +1,4 @@
+apiVersion: v2
+name: hello
+description: A Helm chart for Kubernetes to deploy a simple Nginx server displaying "Hello World"
+version: 0.1.0
