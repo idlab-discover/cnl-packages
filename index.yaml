@@ -11,6 +11,21 @@ entries:
     urls:
     - https://github.com/idlab-discover/cnl-packages/releases/download/nginx-1.0.0/nginx-1.0.0.tgz
     version: 1.0.0
+  streaming:
+  - apiVersion: v2
+    appVersion: "1.1"
+    created: "2024-04-29T14:58:30.802435403Z"
+    dependencies:
+    - name: mysql
+      repository: file://charts/mysql
+      version: 10.2.0
+    description: A streaming app for kubernetes
+    digest: aca4559f329d1b1ce9434cab0318767873d9476325a0177b2539089784bda2c7
+    name: streaming
+    type: application
+    urls:
+    - https://github.com/idlab-discover/cnl-packages/releases/download/streaming-0.2.0/streaming-0.2.0.tgz
+    version: 0.2.0
   streaming-app:
   - apiVersion: v2
     appVersion: "1.1"
@@ -40,4 +55,4 @@ entries:
     urls:
     - https://github.com/idlab-discover/cnl-packages/releases/download/streaming-app-0.1.0/streaming-app-0.1.0.tgz
     version: 0.1.0
-generated: "2024-04-29T14:42:45.599415592Z"
+generated: "2024-04-29T14:58:30.802448347Z"
