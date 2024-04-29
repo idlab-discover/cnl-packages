@@ -5,3 +5,5 @@ entries:
   streaming:
     0.2.0:
       imageUrl: https://variety.com/wp-content/uploads/2022/10/featured_Dare_to_Stream_SR_v6.jpg?w=910&h=511&crop=1&resize=910%2C511
+    0.3.0:
+      imageUrl: https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Microsoft_Stream.svg/1024px-Microsoft_Stream.svg.png
