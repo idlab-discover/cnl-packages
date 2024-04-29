@@ -14,6 +14,20 @@ entries:
   streaming:
   - apiVersion: v2
     appVersion: "1.1"
+    created: "2024-04-29T15:07:57.024965047Z"
+    dependencies:
+    - name: mysql
+      repository: file://charts/mysql
+      version: 10.2.0
+    description: A streaming app for kubernetes
+    digest: f59ac09d864ad972648b2b20997dfd426ca756f8989d370bca84614c6de57ca3
+    name: streaming
+    type: application
+    urls:
+    - https://github.com/idlab-discover/cnl-packages/releases/download/streaming-0.3.0/streaming-0.3.0.tgz
+    version: 0.3.0
+  - apiVersion: v2
+    appVersion: "1.1"
     created: "2024-04-29T14:58:30.802435403Z"
     dependencies:
     - name: mysql
@@ -26,4 +40,4 @@ entries:
     urls:
     - https://github.com/idlab-discover/cnl-packages/releases/download/streaming-0.2.0/streaming-0.2.0.tgz
     version: 0.2.0
-generated: "2024-04-29T14:58:30.802448347Z"
+generated: "2024-04-29T15:07:57.024977731Z"
