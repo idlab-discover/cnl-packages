@@ -22,11 +22,15 @@ spec:
         - name: log-volume
           hostPath:
             path: {{ .Values.logger.hostPath }}
+        - name: dash-volume
+          persistentVolumeClaim:
+            claimName: dash-storage
+
       containers:
         - name: dashgen-webapp
           image: {{ .Values.dashgen.image }}
           command: ["/dashgen"]
-          args: ["$(MYSQL_HOST)", "$(MYSQL_PASSWORD)"]
+          #args: ["$(MYSQL_HOST)", "$(MYSQL_PASSWORD)"]
           ports:
             - containerPort: {{ .Values.dashgen.webappPort }}
           resources:
@@ -40,14 +44,16 @@ spec:
             - name: config-volume
               mountPath: /config
               subPath: defaultConfig.json
-          env:
-            - name: MYSQL_HOST
-              value: mysql.default.svc.cluster.local
-            - name: MYSQL_PASSWORD
-              valueFrom:
-                secretKeyRef:
-                  name: my-mysql-secret # Adjust with the correct secret name
-                  key: mysql-password 
+            - name: dash-volume
+              mountPath: /dash
+          #env:
+          #  - name: MYSQL_HOST
+          #    value: mysql.default.svc.clusterf.local
+          #  - name: MYSQL_PASSWORD
+          #    valueFrom:
+          #      secretKeyRef:
+          #        name: streamingapphelm-mysql # Adjust with the correct secret name
+          #        key: mysql-root-password 
 
 
         - name: logger

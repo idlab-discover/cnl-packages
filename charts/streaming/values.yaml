@@ -1,4 +1,4 @@
-namespace: k8slabohelm
+namespace: k8slabo
 
 dashgen:
   image: gitlab.ilabt.imec.be:4567/togoetha/sysmgmt/dashgen
@@ -10,7 +10,7 @@ dashgen:
     limits:
       memory: "1000Mi"
       cpu: "3000m"
-  nodePort: 30082
+  nodePort: 30080
 
 logger:
   image: gitlab.ilabt.imec.be:4567/togoetha/sysmgmt/logservice
@@ -26,7 +26,7 @@ logger:
 
 streaming:
   image: gitlab.ilabt.imec.be:4567/togoetha/sysmgmt/httpd
-  nodePort: 30083
+  nodePort: 30081
   resources:
     requests:
       memory: "300Mi"
@@ -41,8 +41,6 @@ autoscaler:
 # MySQL values go here if you include the MySQL chart as a dependency.
 
 mysql:
-  global:
-    storageClass: "default"
   primary:
     persistence:
       size: "2Gi" # Set the size to 2GB as you wanted
