@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: streaming-deployment
+  namespace: {{ .Values.namespace }}
+spec:
+  replicas: {{ .Values.streaming.replicas }}
+  selector:
+    matchLabels:
+      app: streaming
+  template:
+    metadata:
+      labels:
+        app: streaming
+    spec:
+      containers:
+        - name: streaming-webapp
+          image: {{ .Values.streaming.image }}
+          ports:
+            - containerPort: 80
+          resources:
+            requests:
+              memory: {{ .Values.streaming.resources.requests.memory }}
+              cpu: {{ .Values.streaming.resources.requests.cpu }}
+          volumeMounts:
+            - name: dash-volume
+              mountPath: /usr/local/apache2/htdocs
+      volumes:
+        - name: dash-volume
+          hostPath:
+            path: /path/to/your/dash/files

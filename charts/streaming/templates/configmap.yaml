@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: dashconfig
+  namespace: {{ .Values.namespace }}
+data:
+  defaultConfig.json: |
+    {
+      "webappPort": {{ .Values.dashgen.webappPort }},
+      "logPort": {{ .Values.logger.logPort }}
+    }

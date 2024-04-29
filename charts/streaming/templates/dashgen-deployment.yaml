@@ -1,0 +1,71 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dashgen-deployment
+  namespace: {{ .Values.namespace }}
+  labels:
+    app: dashgen
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dashgen
+  template:
+    metadata:
+      labels:
+        app: dashgen
+    spec:
+      volumes:
+        - name: config-volume
+          configMap:
+            name: dashconfig
+        - name: log-volume
+          hostPath:
+            path: {{ .Values.logger.hostPath }}
+      containers:
+        - name: dashgen-webapp
+          image: {{ .Values.dashgen.image }}
+          command: ["/dashgen"]
+          args: ["$(MYSQL_HOST)", "$(MYSQL_PASSWORD)"]
+          ports:
+            - containerPort: {{ .Values.dashgen.webappPort }}
+          resources:
+            requests:
+              memory: {{ .Values.dashgen.resources.requests.memory }}
+              cpu: {{ .Values.dashgen.resources.requests.cpu }}
+            limits:
+              memory: {{ .Values.dashgen.resources.limits.memory }}
+              cpu: {{ .Values.dashgen.resources.limits.cpu }}
+          volumeMounts:
+            - name: config-volume
+              mountPath: /config
+              subPath: defaultConfig.json
+          env:
+            - name: MYSQL_HOST
+              value: mysql.default.svc.cluster.local
+            - name: MYSQL_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: my-mysql-secret # Adjust with the correct secret name
+                  key: mysql-password 
+
+
+        - name: logger
+          image: {{ .Values.logger.image }}
+          resources:
+            requests:
+              memory: {{ .Values.logger.resources.requests.memory }}
+              cpu: {{ .Values.logger.resources.requests.cpu }}
+            limits:
+              memory: {{ .Values.logger.resources.limits.memory }}
+              cpu: {{ .Values.logger.resources.limits.cpu }}
+          volumeMounts:
+            - name: config-volume
+              mountPath: /config
+              subPath: defaultConfig.json
+          env:
+            - name: PODNAME
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.name
+            
