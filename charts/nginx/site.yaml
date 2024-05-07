@@ -1,1 +1,7 @@
 imageUrl: "https://www.nginx.com/wp-content/uploads/2021/08/NGINX-Part-of-F5-horiz-black-type-1.svg"
+afterInstallationManual: |
+  # What to do after installing?
+
+  This is some example text.
+  - list
+  - items
