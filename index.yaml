@@ -3,6 +3,16 @@ entries:
   nginx:
   - apiVersion: v2
     appVersion: 1.16.0
+    created: "2024-05-07T08:52:01.911680181Z"
+    description: Default example of an empty nginx
+    digest: c1edc0283213a5b4cda5c5a2c4a6f94f0d4d8e1c4df0d0ea6e2486e394c7ab23
+    name: nginx
+    type: application
+    urls:
+    - https://github.com/idlab-discover/cnl-packages/releases/download/nginx-1.0.1/nginx-1.0.1.tgz
+    version: 1.0.1
+  - apiVersion: v2
+    appVersion: 1.16.0
     created: "2024-04-29T10:49:37.559822015Z"
     description: Default example of an empty nginx
     digest: 70888fda94e416701f59ab9a42bd0cab138db09e08a8aa81ae1bd18fe348a5b7
@@ -40,4 +50,4 @@ entries:
     urls:
     - https://github.com/idlab-discover/cnl-packages/releases/download/streaming-0.2.0/streaming-0.2.0.tgz
     version: 0.2.0
-generated: "2024-04-29T15:07:57.024977731Z"
+generated: "2024-05-07T08:52:01.911694778Z"
