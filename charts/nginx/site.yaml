@@ -1,7 +1,15 @@
 imageUrl: "https://www.nginx.com/wp-content/uploads/2021/08/NGINX-Part-of-F5-horiz-black-type-1.svg"
 afterInstallationManual: |
-  # What to do after installing?
+  ## What to do after installing?
 
-  This is some example text.
-  - list
-  - items
+  This application is exposed using NodePort, to get the IP adress and the port of the application run following commands in terminal.
+  Make sure your Kubeconfig is correctly exported for this.
+  
+
+  ```bash
+  #NodeIP:
+  kubectl describe node | grep Addresses: -A 4
+
+  #NodePort:
+  kubectl get svc
+  ```
