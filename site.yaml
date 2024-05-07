@@ -2,6 +2,16 @@ entries:
   nginx:
     1.0.0:
       imageUrl: https://www.nginx.com/wp-content/uploads/2021/08/NGINX-Part-of-F5-horiz-black-type-1.svg
+    1.0.1:
+      afterInstallationManual: '# What to do after installing?
+
+
+        This is some example text.
+
+        - list
+
+        - items'
+      imageUrl: https://www.nginx.com/wp-content/uploads/2021/08/NGINX-Part-of-F5-horiz-black-type-1.svg
   streaming:
     0.2.0:
       imageUrl: https://variety.com/wp-content/uploads/2022/10/featured_Dare_to_Stream_SR_v6.jpg?w=910&h=511&crop=1&resize=910%2C511
