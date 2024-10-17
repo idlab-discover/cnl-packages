@@ -4,6 +4,7 @@ metadata:
   name: dual-role
   labels:
     strimzi.io/cluster: cnl-kafka
+  namespace: kafka
 spec:
   replicas: 1
   roles:
@@ -25,6 +26,7 @@ metadata:
   annotations:
     strimzi.io/node-pools: enabled
     strimzi.io/kraft: enabled
+  namespace: kafka
 spec:
   kafka:
     version: 3.7.0
@@ -77,6 +79,7 @@ metadata:
   name: kafka-metrics
   labels:
     app: strimzi
+  namespace: kafka
 data:
   kafka-metrics-config.yml: |
     # See https://github.com/prometheus/jmx_exporter for more info about JMX Prometheus Exporter metrics
