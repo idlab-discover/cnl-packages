@@ -17,7 +17,6 @@ spec:
         type: persistent-claim
         size: 50Gi
         deleteClaim: false
-        kraftMetadata: shared
 ---
 apiVersion: kafka.strimzi.io/v1beta2
 kind: Kafka
