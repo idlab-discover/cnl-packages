@@ -1,0 +1,13 @@
+repositories:
+  - name: cnl-packages
+    url: https://idlab-discover.github.io/cnl-packages
+
+releases:
+  - name: kafka-quickstart
+    chart: cnl-packages/kafka-quickstart
+    version: 0.1.2
+    namespace: kafka
+  - name: nginx
+    chart: cnl-packages/nginx
+    version: 1.0.3
+    namespace: nginx
