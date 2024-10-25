@@ -1,13 +1,15 @@
 repositories:
-  - name: cnl-packages
-    url: https://idlab-discover.github.io/cnl-packages
+- name: akuity-demo
+  url: https://akuity.github.io/demo-helm-charts/
 
 releases:
-  - name: kafka-quickstart
-    chart: cnl-packages/kafka-quickstart
-    version: 0.1.2
-    namespace: kafka
-  - name: nginx
-    chart: cnl-packages/nginx
-    version: 1.0.3
-    namespace: nginx
+- name: jupiter
+  chart: akuity-demo/simple-go
+  set:
+  - name: replicaCount
+    value: 2
+- name: saturn
+  chart: akuity-demo/gobg
+  set:
+  - name: color
+    value: green
