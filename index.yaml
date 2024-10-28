@@ -3,6 +3,16 @@ entries:
   kafka-quickstart:
   - apiVersion: v2
     appVersion: 0.1.1
+    created: "2024-10-28T13:31:24.235871319Z"
+    description: A Helm chart for Kubernetes
+    digest: 393e3df002e3e4d12c80da5559fb3fc8b4ecf4ac91501082d94b52e5bb651840
+    name: kafka-quickstart
+    type: application
+    urls:
+    - https://github.com/idlab-discover/cnl-packages/releases/download/kafka-quickstart-0.1.3/kafka-quickstart-0.1.3.tgz
+    version: 0.1.3
+  - apiVersion: v2
+    appVersion: 0.1.1
     created: "2024-10-17T12:17:49.111065911Z"
     description: A Helm chart for Kubernetes
     digest: b4411449328b8fb711a8080ca26dbe01b7fcc8f6a0fe2edfa166e3d1172309dc
@@ -101,4 +111,4 @@ entries:
     urls:
     - https://github.com/idlab-discover/cnl-packages/releases/download/streaming-0.2.0/streaming-0.2.0.tgz
     version: 0.2.0
-generated: "2024-10-17T12:17:49.111082503Z"
+generated: "2024-10-28T13:31:24.235902968Z"
