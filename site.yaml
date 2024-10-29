@@ -1,4 +1,22 @@
 entries:
+  cnl-quickstart:
+    0.1.0:
+      afterInstallationManual: '# What to do after installing?
+
+        This is some example text.
+
+        - list
+
+        - items
+
+        '
+      clusterSettings:
+        controlPlaneMachineCount: 1
+        kubernetesVersion: v1.29.0
+        machineCores: 4
+        workerMachineCount: 1
+        workerMachinesMemory: 8
+      imageUrl: https://cloud.ilabt.imec.be/index.php/apps/files_sharing/publicpreview/WQcN47BDdEJT8eG?file=/&fileId=1169654706&x=2560&y=1440&a=true&etag=08edc2516139b7357d06302547b7cb93
   kafka-quickstart:
     0.1.0:
       afterInstallationManual: '# What to do after installing?
