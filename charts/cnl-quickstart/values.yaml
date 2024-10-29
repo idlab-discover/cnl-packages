@@ -1,0 +1,6 @@
+kafka:
+  namespaceOverride: kafka
+  enabled: true
+argo-cd:
+  namespaceOverride: argocd
+  enabled: true

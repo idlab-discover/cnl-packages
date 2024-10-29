@@ -1,0 +1,9 @@
+dependencies:
+- name: kafka
+  repository: file://subcharts/kafka
+  version: 0.1.0
+- name: argo-cd
+  repository: https://argoproj.github.io/argo-helm
+  version: 7.6.12
+digest: sha256:6daaefdda1216101b79cefb6513394d51567392023eb72ef8d37831d660963ca
+generated: "2024-10-25T11:04:38.715346933+02:00"
