@@ -11,3 +11,7 @@ afterInstallationManual: |
     This is some example text.
     - list
     - items
+
+namespaces:
+  - kafka
+  - argocd
