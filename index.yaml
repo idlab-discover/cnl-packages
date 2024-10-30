@@ -3,6 +3,25 @@ entries:
   cnl-quickstart:
   - apiVersion: v2
     appVersion: 0.1.0
+    created: "2024-10-30T12:08:40.893788496Z"
+    dependencies:
+    - condition: kafka.enabled
+      name: kafka
+      repository: file://subcharts/kafka
+      version: 0.1.0
+    - condition: argo-cd.enabled
+      name: argo-cd
+      repository: https://argoproj.github.io/argo-helm
+      version: 7.6.12
+    description: Deploys common used cloud native tools for Cloud Native Lab
+    digest: a5d5f3b529f9b744e9049f622e34d12ec0460df09bdd01213afb3afbfe9474ed
+    name: cnl-quickstart
+    type: application
+    urls:
+    - https://github.com/idlab-discover/cnl-packages/releases/download/cnl-quickstart-0.1.1/cnl-quickstart-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v2
+    appVersion: 0.1.0
     created: "2024-10-29T12:11:16.018865152Z"
     dependencies:
     - condition: kafka.enabled
@@ -131,4 +150,4 @@ entries:
     urls:
     - https://github.com/idlab-discover/cnl-packages/releases/download/streaming-0.2.0/streaming-0.2.0.tgz
     version: 0.2.0
-generated: "2024-10-29T12:11:16.018890239Z"
+generated: "2024-10-30T12:08:40.893816889Z"
