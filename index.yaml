@@ -3,6 +3,32 @@ entries:
   cnl-quickstart:
   - apiVersion: v2
     appVersion: 0.1.0
+    created: "2024-11-06T15:17:24.647171218Z"
+    dependencies:
+    - condition: kafka.enabled
+      name: kafka
+      repository: file://subcharts/kafka
+      version: 0.1.0
+    - condition: argo-cd.enabled
+      name: argo-cd
+      repository: https://argoproj.github.io/argo-helm
+      version: 7.6.12
+    - name: kube-prometheus-stack
+      repository: https://prometheus-community.github.io/helm-charts
+      version: 65.8.1
+    - condition: monitoring.enabled
+      name: monitoring
+      repository: file://subcharts/monitoring
+      version: 0.1.0
+    description: Deploys common used cloud native tools for Cloud Native Lab
+    digest: 5ce8d6a58e9da7baa8a24feab3ecba9c0af57c57059893618c68905b2c1fe99f
+    name: cnl-quickstart
+    type: application
+    urls:
+    - https://github.com/idlab-discover/cnl-packages/releases/download/cnl-quickstart-0.1.2/cnl-quickstart-0.1.2.tgz
+    version: 0.1.2
+  - apiVersion: v2
+    appVersion: 0.1.0
     created: "2024-10-30T12:08:40.893788496Z"
     dependencies:
     - condition: kafka.enabled
@@ -150,4 +176,4 @@ entries:
     urls:
     - https://github.com/idlab-discover/cnl-packages/releases/download/streaming-0.2.0/streaming-0.2.0.tgz
     version: 0.2.0
-generated: "2024-10-30T12:08:40.893816889Z"
+generated: "2024-11-06T15:17:24.647210342Z"
