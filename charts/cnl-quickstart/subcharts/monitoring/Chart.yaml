@@ -1,5 +1,5 @@
 apiVersion: v2
-name: cnl-quickstart-monitoring
+name: monitoring
 description: Deploys common used cloud native tools for Cloud Native Lab
 
 # A chart can be either an 'application' or a 'library' chart.
