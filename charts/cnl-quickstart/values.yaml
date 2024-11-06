@@ -4,3 +4,13 @@ kafka:
 argo-cd:
   namespaceOverride: argocd
   enabled: true
+monitoring:
+  namespaceOverride: monitoring
+  enabled: true
+kube-prometheus-stack:
+  podMonitorSelector:
+      matchLabels:
+        app: strimzi
+  additionalScrapeConfigsSecret: 
+        name: additional-scrape-configs
+        key: prometheus-additional.yaml
