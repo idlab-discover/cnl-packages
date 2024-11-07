@@ -15,4 +15,4 @@ afterInstallationManual: |
 namespaces:
   - kafka
   - argocd
-  - prometheus
+  - monitoring
