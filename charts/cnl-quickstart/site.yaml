@@ -16,3 +16,7 @@ namespaces:
   - kafka
   - argocd
   - monitoring
+
+argocd:
+  syncOptions:
+    - ServerSideApply=true
