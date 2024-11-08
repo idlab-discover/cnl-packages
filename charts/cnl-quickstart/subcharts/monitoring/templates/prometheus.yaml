@@ -28,7 +28,7 @@ metadata:
   name: prometheus-server
   labels:
     app: strimzi
-  namespace: namespace: {{ template "monitoring.namespace" . }}
+  namespace: {{ template "monitoring.namespace" . }}
 
 ---
 apiVersion: rbac.authorization.k8s.io/v1
