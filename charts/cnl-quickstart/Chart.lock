@@ -11,5 +11,8 @@ dependencies:
 - name: monitoring
   repository: file://subcharts/monitoring
   version: 0.1.0
-digest: sha256:f13d43816382c18632eb164dbc22febdbab7dcd28660fdd7cc93705a1803cffb
-generated: "2024-11-07T16:07:30.128162063+01:00"
+- name: grafana-operator
+  repository: oci://ghcr.io/grafana/helm-charts
+  version: v5.15.1
+digest: sha256:9400db91896b24edb28a01b5e4b2c4c5a0e8d17f0283d598e30f26530d636e08
+generated: "2024-11-12T14:45:58.749090859+01:00"

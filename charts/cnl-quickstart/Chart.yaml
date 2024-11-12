@@ -38,3 +38,6 @@ dependencies:
     repository: file://subcharts/monitoring
     condition: monitoring.enabled
     version: 0.1.0
+  - name: grafana-operator
+    repository: oci://ghcr.io/grafana/helm-charts
+    version: v5.15.1

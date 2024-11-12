@@ -1,46 +1,49 @@
-apiVersion: apps/v1
-kind: Deployment
+apiVersion: grafana.integreatly.org/v1beta1
+kind: Grafana
 metadata:
   name: grafana
   labels:
-    app: strimzi
+    dashboards: "grafana"
   namespace: {{ template "monitoring.namespace" . }}
 spec:
-  replicas: 1
-  selector:
+  config:
+    log:
+      mode: "console"
+    security:
+      admin_user: root
+      admin_password: secret
+---
+apiVersion: grafana.integreatly.org/v1beta1
+kind: GrafanaDatasource
+metadata:
+  name: grafana-ds-prometheus
+  namespace: {{ template "monitoring.namespace" . }}
+spec:
+  instanceSelector:
     matchLabels:
-      name: grafana
-  template:
-    metadata:
-      labels:
-        name: grafana
-    spec:
-      containers:
-      - name: grafana
-        image: grafana/grafana:9.5.18
-        ports:
-        - name: grafana
-          containerPort: 3000
-          protocol: TCP
-        volumeMounts:
-        - name: grafana-data
-          mountPath: /var/lib/grafana
-        - name: grafana-logs
-          mountPath: /var/log/grafana
-        readinessProbe:
-          httpGet:
-            path: /api/health
-            port: 3000
-          initialDelaySeconds: 5
-          periodSeconds: 10
-        livenessProbe:
-          httpGet:
-            path: /api/health
-            port: 3000
-          initialDelaySeconds: 15
-          periodSeconds: 20
-      volumes:
-      - name: grafana-data
-        emptyDir: {}
-      - name: grafana-logs
-        emptyDir: {}
+      dashboards: grafana
+  datasource:
+    access: proxy
+    type: prometheus
+    isDefault: true
+    jsonData:
+      timeInterval: 5s
+      tlsSkipVerify: true
+    name: prom1
+    type: prometheus
+    url: http://prometheus-operated:9090
+---
+apiVersion: grafana.integreatly.org/v1beta1
+kind: GrafanaDashboard
+metadata:
+  name: dashboard-kafka-exporter
+  namespace: {{ template "monitoring.namespace" . }}
+spec:
+  resyncPeriod: 30s
+  datasources:
+    - inputName: "DS_PROMETHEUS"
+      datasourceName: "prom1"
+  instanceSelector:
+    matchLabels:
+      dashboards: "grafana"
+  url: https://raw.githubusercontent.com/strimzi/strimzi-kafka-operator/refs/heads/main/examples/metrics/grafana-dashboards/strimzi-kafka-exporter.json

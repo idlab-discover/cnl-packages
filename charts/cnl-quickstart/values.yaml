@@ -8,9 +8,12 @@ monitoring:
   namespaceOverride: monitoring
   enabled: true
 kube-prometheus-stack:
+  namespaceOverride: monitoring
   podMonitorSelector:
       matchLabels:
         app: strimzi
   additionalScrapeConfigsSecret: 
         name: additional-scrape-configs
         key: prometheus-additional.yaml
+grafana-operator:
+  namespaceOverride: monitoring
