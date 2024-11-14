@@ -34,7 +34,7 @@ afterInstallationManual: |
 ## Custer Settings
 When configuring clusterSettings in site.yaml, consider the following:
 
-- The Kubernetes version should be either v1.27.3 or v1.24.10. (or other versions provided on CloudNativeLab)
+- Try to use the highest available Kubernetes version supported on CNL.
 - The number of control plane machines should be 1 or 3.
 - The number of worker machines should be 1, 2, or 3.
 - The memory for worker machines should be a number between 4 and 16.
