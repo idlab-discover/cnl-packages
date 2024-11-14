@@ -8,9 +8,73 @@ clusterSettings:
 
 afterInstallationManual: |
     # What to do after installing?
-    This is some example text.
-    - list
-    - items
+    CNl Quickstart installs the following application ready for use:
+    - ArgoCD
+    - Kafka
+    - Prometheus
+    - Grafana
+
+    In the sections below you can find a short descriptions and info on how to get started with each of these tools.
+    ## ArgoCD
+    Purpose: GitOps 
+    Namespace: `argocd`
+    Short description: Argo CD is a declarative, GitOps continuous delivery tool for Kubernetes.
+    Usage:
+    1. Retrieve the admin password from the secret `argocd-initial-admin-secret`:
+        ```bash
+        $ KUBECONFIG="/home/sander/Downloads/kube-test" kubectl -n argocd get secret argocd-initial-admin-secret -o yaml
+        apiVersion: v1
+       data:
+          password: bEFkdnJRVDczOWJKTXRRdA==
+        kind: Secret
+        metadata:
+          creationTimestamp: "2024-10-30T13:32:18Z"
+          name: argocd-initial-admin-secret
+          namespace: argocd
+          resourceVersion: "5482274"
+          uid: 69decba4-16d2-4ff1-bff7-a61be85bc163
+        type: Opaque
+        ```
+    2. Decode the password value:
+        `$ echo -n "bEFkdnJRVDczOWJKTXRRdA==" | base64 --decode`
+    3. Set up a port-forward from the argocd clusterip service to your localhost:
+        `kubectl port-forward svc/argocd-server -n argocd 8080:443`
+    4. Navigate with your browser to http://localhost:8080 and login with the username `admin`.
+    
+    ## Kafka
+    Purpose: Message broker
+    Namespace: `kafka`
+    Short description: Kafka is primarily used to build real-time streaming data pipelines and applications that adapt to the data streams. It combines messaging, storage, and stream processing to allow storage and analysis of both historical and real-time data.
+    Usage:
+    CNL quickstart uses the [Strimzi Kafka operator](https://strimzi.io/documentation/). A single broker using KRaft is deployed. You can write (produce) messages to a topic with:
+      
+    ```bash
+    kubectl -n kafka run kafka-producer -ti --image=quay.io/strimzi/kafka:0.44.0-kafka-3.8.0 --rm=true --restart=Never -- bin/kafka-console-producer.sh --bootstrap-server cnl-kafka-kafka-bootstrap:9092 --topic my-topic
+    ```
+    Notice the `--bootstrap-server` argument matches the bootstrap service in the `kafka` namespace. The topic will be automatically created. Reading from the same topic can be done with the following:
+
+    ```bash
+    kubectl -n kafka run kafka-consumer -ti --image=quay.io/strimzi/kafka:0.44.0-kafka-3.8.0 --rm=true --restart=Never -- bin/kafka-console-consumer.sh --bootstrap-server cnl-kafka-kafka-bootstrap:9092 --topic my-topic --from-beginning
+    ```
+    
+    ## Prometheus
+    Purpose: Monitoring and alerting toolkit
+    Namespace: `monitoring`
+    Short description: Prometheus is typically used to collect numeric metrics from services that run 24/7 and allow metric data to be accessed via HTTP endpoints.
+    Usage: CNL quickstart uses the [Prometheus operator](https://prometheus-operator.dev/).
+    
+    ## Grafana
+    Purpose: Analyze and visualize data
+    Namespace: `monitoring`
+    Short description: Interactive visualization web application. It can produce charts, graphs, and alerts for the web when connected to supported data sources.
+    Usage:
+    CNL quickstart uses the [Grafana operator](https://grafana.github.io/grafana-operator/docs/). Access the UI by port forwarding the grafana service:
+    
+    ```bash
+    kubectl -n monitoring port-forward service/grafana-service 3000:3000
+    ```
+    Then navigate to http://localhost:3000 and use the credentials `root/secret`.
+    
 
 namespaces:
   - kafka

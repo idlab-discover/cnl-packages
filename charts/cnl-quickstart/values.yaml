@@ -15,5 +15,10 @@ kube-prometheus-stack:
   additionalScrapeConfigsSecret: 
         name: additional-scrape-configs
         key: prometheus-additional.yaml
+  prometheusSpec:
+    podMonitorSelectorNilUsesHelmValues: false
+    probeSelectorNilUsesHelmValues: false
+    ruleSelectorNilUsesHelmValues: false
+    serviceMonitorSelectorNilUsesHelmValues: false
 grafana-operator:
   namespaceOverride: monitoring
