@@ -21,5 +21,11 @@ kube-prometheus-stack:
       probeSelectorNilUsesHelmValues: false
       ruleSelectorNilUsesHelmValues: false
       serviceMonitorSelectorNilUsesHelmValues: false
+  grafana:
+    enabled: false
+  kube-state-metrics:
+    namespaceOverride: monitoring
+  prometheus-node-exporter:
+    namespaceOverride: monitoring
 grafana-operator:
   namespaceOverride: monitoring
