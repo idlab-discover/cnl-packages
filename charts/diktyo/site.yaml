@@ -1,0 +1,18 @@
+imageUrl: "https://cloud.ilabt.imec.be/index.php/apps/files_sharing/publicpreview/WPeA9PRBo7t5X8A?file=/&fileId=1171941892&x=2560&y=1440&a=true&etag=afd653750f73b4dc4591cc323679d1be"
+clusterSettings: 
+    kubernetesVersion: "v1.29.0"
+    controlPlaneMachineCount: 1
+    workerMachineCount: 1
+    workerMachinesMemory: 8
+    machineCores: 4
+
+afterInstallationManual: |
+    # What to do after installing?
+    https://github.com/kubernetes-sigs/scheduler-plugins/tree/master/kep/260-network-aware-scheduling 
+
+namespaces:
+  - diktyo
+
+argocd:
+  syncOptions:
+    - ServerSideApply=true

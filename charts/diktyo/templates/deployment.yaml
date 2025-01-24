@@ -1,0 +1,146 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: {{ .Values.controller.name }}
+  namespace: {{ .Release.Namespace }}
+  labels:
+    app: {{ .Values.controller.name }}
+spec:
+  replicas: {{ .Values.controller.replicaCount }}
+  selector:
+    matchLabels:
+      app: {{ .Values.controller.name }}
+  template:
+    metadata:
+      labels:
+        app: {{ .Values.controller.name }}
+    spec:
+      serviceAccountName: {{ .Values.controller.name }}
+      containers:
+      - name: scheduler-plugins-controller
+        image: {{ .Values.controller.image }}
+        imagePullPolicy: IfNotPresent
+---
+# Deploy Diktyo
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    component: scheduler
+  name: {{ .Values.scheduler.name }}
+  namespace: {{ .Release.Namespace }}
+spec:
+  selector:
+    matchLabels:
+      component: scheduler
+      tier: control-plane
+  replicas: {{ .Values.scheduler.replicaCount }}
+  template:
+    metadata:
+      labels:
+        component: scheduler
+        tier: control-plane
+    spec:
+      serviceAccountName: {{ .Values.scheduler.name }}
+      nodeSelector: # Modify accordingly
+        node-role.kubernetes.io/control-plane: ""
+      containers:
+      - command:
+        - /bin/kube-scheduler
+        - --authentication-kubeconfig={{ .Values.schedulerConfig.filePath }}
+        - --authorization-kubeconfig={{ .Values.schedulerConfig.filePath }}
+        - --config={{ .Values.diktyoConfig.mountPath }}/{{ .Values.diktyoConfig.name }}.yaml
+        - -v=9
+        name: {{ .Values.scheduler.name }}
+        image: {{ .Values.scheduler.image }}
+        imagePullPolicy: IfNotPresent        
+        livenessProbe:
+          httpGet:
+            path: /healthz
+            port: 10259
+            scheme: HTTPS
+          initialDelaySeconds: 15
+        readinessProbe:
+          httpGet:
+            path: /healthz
+            port: 10259
+            scheme: HTTPS
+        resources:
+          requests:
+            cpu: '0.1'
+        securityContext:
+          privileged: false
+        volumeMounts:
+          - name: {{ .Values.schedulerConfig.name }}
+            mountPath: {{ .Values.schedulerConfig.filePath }}
+            readOnly: true
+          - name: {{ .Values.diktyoConfig.name }}
+            mountPath: {{ .Values.diktyoConfig.mountPath }}
+            readOnly: true
+      tolerations: # Modify the toleration if needed
+      - key: "node-role.kubernetes.io/control-plane"
+        operator: "Equal"
+        value: ""
+        effect: "NoSchedule"
+      hostNetwork: false
+      hostPID: false
+      volumes:
+        - name: {{ .Values.schedulerConfig.name }}
+          hostPath:
+            path: {{ .Values.schedulerConfig.filePath }}
+            type: File
+        - name: {{ .Values.diktyoConfig.name }}
+          configMap:
+            name: {{ .Values.diktyoConfig.name }}
+---
+# Deploy appGroup controller
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: {{ .Values.appGroupController.name }}
+  namespace: {{ .Release.Namespace }}
+  labels:
+    app: {{ .Values.appGroupController.name }}
+spec:
+  replicas: {{ .Values.appGroupController.replicaCount }}
+  selector:
+    matchLabels:
+      app: {{ .Values.appGroupController.name }}
+  template:
+    metadata:
+      labels:
+        app: {{ .Values.appGroupController.name }}
+    spec:
+      serviceAccountName: {{ .Values.appGroupController.name }}
+      containers:
+        - name: {{ .Values.appGroupController.name }}
+          image: {{ .Values.appGroupController.image }}
+          command:
+            - /bin/controller
+          imagePullPolicy: Always #IfNotPresent
+---
+# Deploy NetworkTopology controller
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: {{ .Values.networkTopologyController.name }}
+  namespace: {{ .Release.Namespace }}
+  labels:
+    app: {{ .Values.networkTopologyController.name }}
+spec:
+  replicas: {{ .Values.networkTopologyController.replicaCount }}
+  selector:
+    matchLabels:
+      app: {{ .Values.networkTopologyController.name }}
+  template:
+    metadata:
+      labels:
+        app: {{ .Values.networkTopologyController.name }}
+    spec:
+      serviceAccountName: {{ .Values.networkTopologyController.name }}
+      containers:
+        - name: {{ .Values.networkTopologyController.name }}
+          image: {{ .Values.networkTopologyController.image }}
+          command:
+            - /bin/controller
+          imagePullPolicy: Always #IfNotPresent
