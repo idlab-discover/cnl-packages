@@ -88,6 +88,17 @@ entries:
     urls:
     - https://github.com/idlab-discover/cnl-packages/releases/download/cnl-quickstart-0.1.11/cnl-quickstart-0.1.11.tgz
     version: 0.1.11
+  diktyo-scheduler:
+  - apiVersion: v2
+    appVersion: 0.0.1
+    created: "2025-01-24T10:04:23.146080678Z"
+    description: deploy Diktyo as a second scheduler in a K8s cluster
+    digest: 6ddf6f5e3970ff99e0af1a13485ffabc95f305f8892bfcbe7b8230ec951a4a1c
+    name: diktyo-scheduler
+    type: application
+    urls:
+    - https://github.com/idlab-discover/cnl-packages/releases/download/diktyo-scheduler-0.0.1/diktyo-scheduler-0.0.1.tgz
+    version: 0.0.1
   kafka-quickstart:
   - apiVersion: v2
     appVersion: 0.1.1
@@ -110,4 +121,4 @@ entries:
     urls:
     - https://github.com/idlab-discover/cnl-packages/releases/download/nginx-1.0.4/nginx-1.0.4.tgz
     version: 1.0.4
-generated: "2024-11-15T09:31:15.277616065Z"
+generated: "2025-01-24T10:04:23.146092981Z"
