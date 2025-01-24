@@ -36,4 +36,6 @@ schedulerConfig:
 diktyoConfig:
   name: diktyo-config
   mountPath: /etc/diktyo
+  
+namespace: diktyo
 

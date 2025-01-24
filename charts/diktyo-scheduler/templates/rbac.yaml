@@ -85,7 +85,7 @@ roleRef:
 subjects:
 - kind: ServiceAccount
   name: {{ .Values.scheduler.name }}
-  namespace: {{ .Release.Namespace }}
+  namespace: {{ .Values.namespace | default .Release.Namespace }}
 ---
 # Permissions for scheduler-plugins-controller
 kind: ClusterRole
@@ -117,7 +117,7 @@ metadata:
 subjects:
 - kind: ServiceAccount
   name: {{ .Values.controller.name }}
-  namespace: {{ .Release.Namespace }}
+  namespace: {{ .Values.namespace | default .Release.Namespace }}
 roleRef:
   kind: ClusterRole
   name: {{ .Values.controller.name }}
@@ -135,10 +135,10 @@ roleRef:
 subjects:
 - kind: ServiceAccount
   name: {{ .Values.scheduler.name }}
-  namespace: {{ .Release.Namespace }}
+  namespace: {{ .Values.namespace | default .Release.Namespace }}
 - kind: ServiceAccount
   name: {{ .Values.controller.name }}
-  namespace: {{ .Release.Namespace }}
+  namespace: {{ .Values.namespace | default .Release.Namespace }}
 ---
 # Extra permissions
 kind: ClusterRole
@@ -160,7 +160,7 @@ metadata:
 subjects:
   - kind: ServiceAccount
     name:  {{ .Values.appGroupController.name }}
-    namespace: {{ .Release.Namespace }}
+    namespace: {{ .Values.namespace | default .Release.Namespace }}
 roleRef:
   kind: ClusterRole
   name: {{ .Values.appGroupController.name }}
@@ -195,7 +195,7 @@ metadata:
 subjects:
   - kind: ServiceAccount
     name:  {{ .Values.networkTopologyController.name }}
-    namespace: {{ .Release.Namespace }}
+    namespace: {{ .Values.namespace | default .Release.Namespace }}
 roleRef:
   kind: ClusterRole
   name: {{ .Values.networkTopologyController.name }}
