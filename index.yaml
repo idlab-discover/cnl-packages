@@ -91,6 +91,16 @@ entries:
   diktyo-scheduler:
   - apiVersion: v2
     appVersion: 0.0.1
+    created: "2025-01-24T12:36:06.753724912Z"
+    description: deploy Diktyo as a second scheduler in a K8s cluster
+    digest: 537ef25b23933c0deb7c463db3cb6346398f71012703110064db0a3b2ea69ebd
+    name: diktyo-scheduler
+    type: application
+    urls:
+    - https://github.com/idlab-discover/cnl-packages/releases/download/diktyo-scheduler-0.0.3/diktyo-scheduler-0.0.3.tgz
+    version: 0.0.3
+  - apiVersion: v2
+    appVersion: 0.0.1
     created: "2025-01-24T10:10:07.762140242Z"
     description: deploy Diktyo as a second scheduler in a K8s cluster
     digest: 5575ada3af4205acd017d08bbd5b88008657c39f03ee2f04f4c347521ba08bbd
@@ -131,4 +141,4 @@ entries:
     urls:
     - https://github.com/idlab-discover/cnl-packages/releases/download/nginx-1.0.4/nginx-1.0.4.tgz
     version: 1.0.4
-generated: "2025-01-24T10:10:07.762160059Z"
+generated: "2025-01-24T12:36:06.753741643Z"
