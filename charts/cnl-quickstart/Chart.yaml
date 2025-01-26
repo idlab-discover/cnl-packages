@@ -1,6 +1,7 @@
 apiVersion: v2
 name: cnl-quickstart
-description: All the tools you need to start developing Cloud Native Applications: Apache Kafka, ArgoCD, Prometheus and Grafana. Deploy this app and start coding! Monitoring, CI/CD and messaging are all taken care of.
+description: | 
+  All the tools you need to start developing Cloud Native Applications: Apache Kafka, ArgoCD, Prometheus and Grafana. Deploy this app and start coding! Monitoring, CI/CD and messaging are all taken care of.
 
 # A chart can be either an 'application' or a 'library' chart.
 #
