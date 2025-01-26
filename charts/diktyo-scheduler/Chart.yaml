@@ -1,6 +1,9 @@
 apiVersion: v2
 name: diktyo-scheduler
-description: deploy Diktyo as a second scheduler in a K8s cluster
+description: |
+  A network-aware scheduler for Kubernetes.
+
+  Deploy this app to your cluster to add the Diktyo scheduler to the Kubernetes cluster. This Scheduler takes network latency and application topology into account when deciding where to run your application's pods.
 
 # A chart can be either an 'application' or a 'library' chart.
 #
