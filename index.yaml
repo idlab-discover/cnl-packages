@@ -3,6 +3,37 @@ entries:
   cnl-quickstart:
   - apiVersion: v2
     appVersion: 0.1.0
+    created: "2025-01-26T19:59:51.54006986Z"
+    dependencies:
+    - condition: kafka.enabled
+      name: kafka
+      repository: file://subcharts/kafka
+      version: 0.1.0
+    - condition: argo-cd.enabled
+      name: argo-cd
+      repository: https://argoproj.github.io/argo-helm
+      version: 7.6.12
+    - name: kube-prometheus-stack
+      repository: https://prometheus-community.github.io/helm-charts
+      version: 65.3.1
+    - condition: monitoring.enabled
+      name: monitoring
+      repository: file://subcharts/monitoring
+      version: 0.1.0
+    - name: grafana-operator
+      repository: oci://ghcr.io/grafana/helm-charts
+      version: v5.15.1
+    description: 'All the tools you need to start developing Cloud Native Applications:
+      Apache Kafka, ArgoCD, Prometheus and Grafana. Deploy this app and start coding!
+      Monitoring, CI/CD and messaging are all taken care of. '
+    digest: e6ba53b165b3f3feba445743afe7ce11d5fa5e6e02ff7082bdd5213dd5d51a6b
+    name: cnl-quickstart
+    type: application
+    urls:
+    - https://github.com/idlab-discover/cnl-packages/releases/download/cnl-quickstart-0.1.15/cnl-quickstart-0.1.15.tgz
+    version: 0.1.15
+  - apiVersion: v2
+    appVersion: 0.1.0
     created: "2024-11-15T09:31:15.277596679Z"
     dependencies:
     - condition: kafka.enabled
@@ -154,4 +185,4 @@ entries:
     urls:
     - https://github.com/idlab-discover/cnl-packages/releases/download/nginx-1.0.4/nginx-1.0.4.tgz
     version: 1.0.4
-generated: "2025-01-26T19:49:58.719646485Z"
+generated: "2025-01-26T19:59:51.540099145Z"
