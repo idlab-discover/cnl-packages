@@ -10,6 +10,6 @@ releases:
     forceNamespace: kafka
   - name: nginx
     chart: cnl-packages/nginx
-    version: 1.0.3
+    version: 1.0.4
     namespace: nginx
     forceNamespace: nginx
